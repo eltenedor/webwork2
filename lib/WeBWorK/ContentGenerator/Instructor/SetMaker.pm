@@ -602,7 +602,7 @@ sub browse_library_panel2 {
 	    my $cc;
 	    foreach $ll ( keys( %{$ce->{problemLibrary}} ) ) {
 		# skip "LookupTable"
-		next if ( ($ll eq "LookupTable") || ( $ll eq "" ) ) ;
+		next if ( ($ll eq "LookupTable") || ( $ll eq "showLibraryGlobalStats" ) || ( $ll eq "showLibraryLocalStats" ) || ( $ll eq "" ) ) ;
 		$r->param( 'library_name' => "$ce->{problemLibrary}->{$ll}->{linkname}" );
 
 		# FIXME should check here that this library is installed for this course
