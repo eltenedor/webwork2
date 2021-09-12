@@ -103,7 +103,7 @@
 				        if (arr == "1") {
 					   line = "There is 1 matching WeBWorK problem in " + myLb
 				        } else if (arr == "0") {
-					   line = "There are no matching WeBWorK problem in " + myLb
+					   line = "There are no matching WeBWorK problems in " + myLb
 					}
 					$('#library_count_line').html(line);
 
