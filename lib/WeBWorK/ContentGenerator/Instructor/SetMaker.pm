@@ -601,7 +601,7 @@ sub browse_library_panel2 {
 	    my $ll; 
 	    my $cc;
 	    foreach $ll ( keys( %{$ce->{problemLibrary}} ) ) {
-		# skip "LookupTable"
+		# skip "LookupTable, showLibraryGlobalStats, showLibraryLocalStats"
 		next if ( ($ll eq "LookupTable") || ( $ll eq "showLibraryGlobalStats" ) || ( $ll eq "showLibraryLocalStats" ) || ( $ll eq "" ) ) ;
 		$r->param( 'library_name' => "$ce->{problemLibrary}->{$ll}->{linkname}" );
 
