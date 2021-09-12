@@ -21,7 +21,6 @@ use File::Basename;
 use Cwd;
 use DBI;
 
-<<<<<<< HEAD
 # Command line arguments
 # for some reason the first command line argument is disappearing before it gets here
 
@@ -178,12 +177,10 @@ $dbh->prepare("SET NAMES '$character_set'")->execute();
 
 print "using character set $character_set to build OPL database\n";
 
-my $libraryRoot = $ce->{problemLibrary}->{root};
+my $libraryRoot = $ce->{problemLibrary}->{$myLib}->{root};
 $libraryRoot =~ s|/+$||;
 print "using libraryRoot $libraryRoot\n";
 print "WEBWORK_ROOT $ENV{WEBWORK_ROOT}\n";
-## my $libraryVersion = $ce->{problemLibrary}->{version};
-# by tani
 my $libraryVersion = $ce->{problemLibrary}->{$myLib}->{version};
 my $db_storage_engine = $ce->{problemLibrary_db}->{storage_engine};
 
@@ -1028,7 +1025,6 @@ if ( $clearAll == 1 ) {
     }
 }
 
-<<<<<<< HEAD
 # Now run the script build-library-tree
 # This is used to create the file ${myLib}-library-tree.json which can be used to
 # load in subject-chapter-section information for the OPL
