@@ -531,6 +531,8 @@
 		}
 	})();
 
+	$("select[name=library_name]").on("change", function() { lib_update('count', 'clear'); });
+	$("input[name=change_library]").click(function() { lib_update('subjects', 'get'); });
 	$("select[name=library_chapters]").on("change", function() { lib_update('sections', 'get'); });
 	$("select[name=library_subjects]").on("change", function() { lib_update('chapters', 'get'); });
 	$("select[name=library_sections]").on("change", function() { lib_update('count', 'clear'); });
@@ -540,4 +542,5 @@
 	$("select[name=local_sets]").on("change", markinset);
 	$("span[name=dont_show]").click(function() { delrow($(this).data('row-cnt')); });
 	$(".lb-mlt-parent").click(function() { togglemlt($(this).data('mlt-cnt'), $(this).data('mlt-noshow-class')); });
+
 })();

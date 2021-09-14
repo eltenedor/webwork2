@@ -631,12 +631,10 @@ sub browse_library_panel2 {
 				CGI::popup_menu(-name=> 'library_name', 
 					            -values=>\@libs,
 						    -labels=>\%libNames,
-					            -default=> $libName_selected,
-						    -onchange=>"lib_update('count', 'clear');return true"
+					            -default=> $libName_selected
 				 )]),
 			CGI::td({-colspan=>2, -align=>"left"},
-				CGI::button(-name=>"change_library", -value=>$r->maketext("Get subjects in this library"),
-					    -onclick=>"lib_update('subjects', 'get');return true"
+				CGI::button(-name=>"change_library", -value=>$r->maketext("Get subjects in this library")
 					    ))
 		),
 
