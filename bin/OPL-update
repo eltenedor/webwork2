@@ -13,6 +13,7 @@
 #      correctly defined (as with other scripts here).
 #   3) Configuration for the OPL in site.conf needs to be
 #      done (basically just setting the path to the OPL files).
+#
 
 #use strict;
 use File::Find;
@@ -21,15 +22,10 @@ use File::Basename;
 use Cwd;
 use DBI;
 
-# Command line arguments
-# for some reason the first command line argument is disappearing before it gets here
-
 my $myLib = "OPL" ; # default value
 my $clearAll = 1  ; # default value - drop ALL old tables
 
 if ( ( 0 + @ARGV ) > 0 ) {
-
-  #print join("  ,  ", @ARGV );
 
   $myLib = shift;
 

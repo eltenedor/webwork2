@@ -26,10 +26,6 @@ use JSON;
 our @EXPORT    = ();
 our @EXPORT_OK = qw(build_library_directory_tree build_library_subject_tree build_library_textbook_tree writeJSONtoFile);
 
-# what library are we handling, now is first argument of the function
-my $myLib = shift;
-
-
 ### Data for creating the database tables
 
 
