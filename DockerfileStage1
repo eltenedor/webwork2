@@ -138,7 +138,7 @@ RUN apt-get update \
 # ==================================================================
 # Phase 3 - install additional Perl modules from CPAN (not packaged for Ubuntu or outdated in Ubuntu)
 
-RUN cpanm install Statistics::R::IO \
+RUN cpanm install Statistics::R::IO SVG \
 	&& rm -fr ./cpanm /root/.cpanm /tmp/*
 
 # ==================================================================
